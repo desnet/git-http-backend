@@ -146,7 +146,7 @@ func serviceRpc(hr HandlerReq) {
 	cmd := exec.Command(DefaultConfig.GitBinPath, args...)
 	version := r.Header.Get("Git-Protocol")
 	if len(version) != 0 {
-		cmd.Env = append(env, fmt.Sprintf("GIT_PROTOCOL=%s", version))
+		env = append(env, fmt.Sprintf("GIT_PROTOCOL=%s", version))
 	}
 	cmd.Dir = dir
 	cmd.Env = env
