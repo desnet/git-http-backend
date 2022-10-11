@@ -1,3 +1,3 @@
-module github.com/asim/git-http-backend
+module github.com/desnet/git-http-backend
 
 go 1.18
